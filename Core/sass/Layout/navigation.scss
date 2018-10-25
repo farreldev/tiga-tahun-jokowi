@@ -1,0 +1,60 @@
+.navigasi {
+    position: absolute;
+    // position: fixed;
+    width: auto;
+    height: 100%;
+    top: -100%;
+    left: 90px;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    bottom: 0;
+    z-index: 5;
+    @include breakpoint(mobile) {
+        width: auto;
+        left: 15px;
+        overflow-y: auto;
+    }
+    ul {
+        position: relative;
+        padding: 0 0 10px;
+        background: rgba(0,0,0,.7);
+        border-top: 5px solid $orange;
+        li {
+            position: relative;
+            color: white;
+            font-family: "roboto_bold";
+            text-transform: uppercase;
+            font-size: 18px;
+            // text-align: center;
+            a {
+                position: relative;
+                padding: 12px 35px;
+                display: block;
+                font-family: "roboto_bold";
+                text-decoration: none;
+                color: white;
+                z-index: 2;
+                &.captionMnu {
+                    padding: 15px 35px;
+                    border-bottom: 1px solid rgba(255,255,255,.8);
+                }
+                &:hover {
+                    color: $orange;
+                }
+            }
+        }
+    }
+    &.mnuOpen {
+        top: 70px;
+        left: 90px;
+        opacity: 1;
+        transition: all .5s ease-in-out;
+        @include breakpoint(mobile) {
+            width: auto;
+            left: 15px;
+            overflow-y: auto;
+        }
+    }
+}
+
+

@@ -1,0 +1,61 @@
+body {
+    font-family: "roboto_light";
+    line-height: 1;
+}
+
+section.artikel,
+section.artikel-lainnya,
+section.opini,
+section.infografik,
+section.multimedia,
+section.databoks,
+section.sponsor {
+    padding: 40px 0 30px;
+    color: $hitam;
+    &.black {
+        color: white;
+        background: $hitam;
+    }
+    &.biru {
+        color: white;
+        background: $biru;
+    }
+    &.abu {
+        color: white;
+        background: $abu;
+    }
+    &.abu-light {
+        color: $hitam;
+        background: $abu-light;
+    }
+}
+
+%listSosmed {
+    li {
+        display: inline-block;
+        margin: 10px 5px;
+        a {
+            display: block;
+            padding: 4px;
+            color: white;
+            i {
+                font-size: 25px;
+            }
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.sosmed-share-top {
+    position: relative;
+    top: 20px;
+    float: right;
+    z-index: 3;
+    @extend %listSosmed;
+}
+
+.sosmed-share {
+    @extend %listSosmed;
+}
